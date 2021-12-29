@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:insert="navbar::my-navbar"></div>
+<!--/*@thymesVar id="Address" type="com.example.demo.model.Address"*/-->
+<form action="/meteo" method ="post">
+    <div>
+        <label for ="address"> Please input your
+            adress : </label>
+        <input type="text"  id="address" name="adress"/>
+    </div>
+    <div>
+        <button type="submit"> Get the weather at the given
+            address ! </button>
+    </div>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href = "@{/css/bootstrap.css}" rel="stylesheet">
+</head>
+<body>
+<div th:insert="navbar::my-navbar"></div>
+
+<h1> Les  adresses  Etalab</h1>
+<ul th:each ="EtalabAddress:${EtalabAddresses}">
+    <li th:text ="${EtalabAddress.id}"></li>
+    <li th:text ="${EtalabAddress.name}" ></li>
+    <li th:text ="${EtalabAddress.postcode}"></li>
+    <li th:text ="${EtalabAddress.x}" ></li>
+    <li th:text ="${EtalabAddress.y}"></li>
+    <li th:text ="${EtalabAddress.city}" ></li>
+    <li th:text ="${EtalabAddress.type}"></li>
+</ul>
+</body>
+</html>
